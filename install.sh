@@ -19,19 +19,20 @@ for dot in $(ls); do
 done
 
 
-mkdir -p "$HOME/.vim/"{bundle}
+mkdir -p "$HOME/.vim/bundle"
 
-if [[ ! -d "$HOME/.vim/bundle/vundle" ]]; then
+if [[ ! -d "$HOME/.vim/bundle/Vundle.vim" ]]; then
     echo "Installing vundle"
-    git clone https://github.com/gmarik/vundle.git "$HOME/.vim/bundle/vundle" &> /dev/null
-    echo "Now start vim and run:"
-    echo ":BundleInstall"
+    git clone https://github.com/gmarik/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim" &> /dev/null
 else
     echo "Vundle already installed"
 fi
 
-echo "Running bundle update"
-vim -c BundleUpdate -c qa &> /dev/null
+echo "Installing Vundle Plugins"
+vim +PluginInstall +qall
+
+echo "Compiling YouCompleteMe"
+"$HOME/.vim/bundle/YouCompleteMe/install.sh"
 
 source ~/.bashrc
 
