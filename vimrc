@@ -104,3 +104,14 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
+
+" Text searching
+set hlsearch
+hi Search guibg=LightBlue
+" Press Space to turn off highlighting and clear any message already
+" displayed.
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+set ignorecase
+set smartcase
+nnoremap * /\<<C-R>=expand('<cword>')<CR>\><CR>
+nnoremap # ?\<<C-R>=expand('<cword>')<CR>\><CR>
