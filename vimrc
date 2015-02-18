@@ -146,3 +146,7 @@ set title
 
 " quick <esc> out by hitting kj
 imap kj <ESC>
+
+" CtrLP Mapping
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
