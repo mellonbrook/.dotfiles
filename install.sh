@@ -22,7 +22,6 @@ if [[ ! -d "$HOME/.bash-git-prompt" ]]; then
     git clone https://github.com/magicmonty/bash-git-prompt.git "$HOME/.bash-git-prompt"
 fi
 
-
 mkdir -p "$HOME/.vim/bundle"
 
 if [[ ! -d "$HOME/.vim/bundle/Vundle.vim" ]]; then
@@ -41,6 +40,8 @@ if [[ ! -f "$HOME/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so" ]]; th
     sudo apt-get install python-dev
     "$HOME/.vim/bundle/YouCompleteMe/install.sh"
 fi
+
+sudo apt-get install ctags
 
 source ~/.bashrc
 
