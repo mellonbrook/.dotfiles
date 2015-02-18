@@ -18,6 +18,10 @@ for dot in $(ls); do
     fi
 done
 
+if [[ ! -d "$HOME/.bash-git-prompt" ]]; then
+    git clone https://github.com/magicmonty/bash-git-prompt.git "$HOME/.bash-git-prompt"
+fi
+
 
 mkdir -p "$HOME/.vim/bundle"
 
