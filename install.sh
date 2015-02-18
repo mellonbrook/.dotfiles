@@ -33,6 +33,8 @@ vim +PluginInstall +qall
 
 if [[ ! -f "$HOME/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so" ]]; then
     echo "Compiling YouCompleteMe"
+    sudo apt-get install build-essential cmake
+    sudo apt-get install python-dev
     "$HOME/.vim/bundle/YouCompleteMe/install.sh"
 fi
 
