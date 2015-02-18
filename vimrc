@@ -115,3 +115,27 @@ set ignorecase
 set smartcase
 nnoremap * /\<<C-R>=expand('<cword>')<CR>\><CR>
 nnoremap # ?\<<C-R>=expand('<cword>')<CR>\><CR>
+
+" Enable line numbers
+set number
+
+" Highlight current line
+set cursorline
+
+" Disable error bells
+set noerrorbells
+
+"" Always show status line
+set laststatus=2
+
+" Don’t reset cursor to start of line when moving around.
+set nostartofline
+
+" Show the cursor position
+set ruler
+
+" Show the current mode
+set showmode
+
+" Show the filename in the window titlebar
+set title
