@@ -143,3 +143,6 @@ set showmode
 
 " Show the filename in the window titlebar
 set title
+
+" quick <esc> out by hitting kj
+imap kj <ESC>
