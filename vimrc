@@ -13,19 +13,23 @@ Plugin 'gmarik/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'Valloric/YouCompleteMe'
-
 " Track the engine.
 Plugin 'SirVer/ultisnips'
-
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
-
 Plugin 'sukima/xmledit'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'jmcomets/vim-pony'
 Plugin 'sjl/gundo.vim'
 Plugin 'kien/ctrlp.vim'
+
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'Lokaltog/powerline'
+Plugin 'maxbrunsfeld/vim-yankstack'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
