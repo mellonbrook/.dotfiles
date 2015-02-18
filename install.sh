@@ -31,8 +31,10 @@ fi
 echo "Installing Vundle Plugins"
 vim +PluginInstall +qall
 
-echo "Compiling YouCompleteMe"
-"$HOME/.vim/bundle/YouCompleteMe/install.sh"
+if [[ ! -f "$HOME/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so" ]]; then
+    echo "Compiling YouCompleteMe"
+    "$HOME/.vim/bundle/YouCompleteMe/install.sh"
+fi
 
 source ~/.bashrc
 
