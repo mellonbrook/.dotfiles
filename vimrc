@@ -99,6 +99,11 @@ autocmd FileType python set sw=4
 autocmd FileType python set ts=4
 autocmd FileType python set sts=4
 
+set tabstop=8
+set expandtab
+set softtabstop=4
+set shiftwidth=4
+
 " Code Folding - inside a method and type za to open and close a fold.
 set foldmethod=indent
 set foldlevel=99
@@ -150,3 +155,24 @@ imap kj <ESC>
 " CtrLP Mapping
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" Display output of shell commands in new window
+command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)
+function! s:RunShellCommand(cmdline)
+  echo a:cmdline
+  let expanded_cmdline = a:cmdline
+  for part in split(a:cmdline, ' ')
+     if part[0] =~ '\v[%#<]'
+        let expanded_part = fnameescape(expand(part))
+        let expanded_cmdline = substitute(expanded_cmdline, part, expanded_part, '')
+     endif
+  endfor
+  botright new
+  setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile nowrap
+  call setline(1, 'You entered:    ' . a:cmdline)
+  call setline(2, 'Expanded Form:  ' .expanded_cmdline)
+  call setline(3,substitute(getline(2),'.','=','g'))
+  execute '$read !'. expanded_cmdline
+  setlocal nomodifiable
+  1
+endfunction
