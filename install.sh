@@ -3,7 +3,7 @@
 pushd $(dirname $0) &> /dev/null
 
 for dot in $(ls); do
-    if [[ ! $dot == "README.rst" ]] && [[ ! $dot == "install.sh" ]] && [[ ! $dot == "xinitrc" ]] && [[ ! $dot == "Xdefaults" ]] && [[ ! $dot == "terminfo" ]]; then
+    if [[ ! $dot == "install.sh" ]] && [[ ! $dot == "indent" ]] && [[ ! $dot == "ftplugin" ]]; then
         target="$HOME/.$dot"
 
 	# Make a .bak of a file or dir
