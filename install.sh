@@ -23,6 +23,10 @@ if [[ ! -d "$HOME/.bash-git-prompt" ]]; then
 fi
 
 mkdir -p "$HOME/.vim/bundle"
+mkdir -p "$HOME/.vim/indent"
+mkdir -p "$HOME/.vim/ftplugin"
+ln -sf "$PWD/indent/python.vim" "$HOME/.vim/indent/python.vim"
+ln -sf "$PWD/ftplugin/python.vim" "$HOME/.vim/ftplugin/python.vim"
 
 if [[ ! -d "$HOME/.vim/bundle/Vundle.vim" ]]; then
     echo "Installing vundle"

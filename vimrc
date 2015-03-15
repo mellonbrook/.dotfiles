@@ -95,14 +95,14 @@ autocmd BufEnter *.py call SetAppDir()
 " End
 
 " Vim Modeline
-autocmd FileType python set sw=4
-autocmd FileType python set ts=4
-autocmd FileType python set sts=4
+" autocmd FileType python set sw=4
+" autocmd FileType python set ts=4
+" autocmd FileType python set sts=4
 
-set tabstop=8
-set expandtab
-set softtabstop=4
-set shiftwidth=4
+" set tabstop=8
+" set expandtab
+" set softtabstop=4
+" set shiftwidth=4
 
 " Code Folding - inside a method and type za to open and close a fold.
 set foldmethod=indent
