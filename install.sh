@@ -27,6 +27,10 @@ mkdir -p "$HOME/.vim/indent"
 mkdir -p "$HOME/.vim/ftplugin"
 ln -sf "$PWD/indent/python.vim" "$HOME/.vim/indent/python.vim"
 ln -sf "$PWD/ftplugin/python.vim" "$HOME/.vim/ftplugin/python.vim"
+ln -sf "$PWD/indent/ruby.vim" "$HOME/.vim/indent/ruby.vim"
+ln -sf "$PWD/ftplugin/ruby.vim" "$HOME/.vim/ftplugin/ruby.vim"
+ln -sf "$PWD/indent/eruby.vim" "$HOME/.vim/indent/eruby.vim"
+ln -sf "$PWD/ftplugin/eruby.vim" "$HOME/.vim/ftplugin/eruby.vim"
 
 if [[ ! -d "$HOME/.vim/bundle/Vundle.vim" ]]; then
     echo "Installing vundle"
